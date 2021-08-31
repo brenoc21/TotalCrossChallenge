@@ -1,1 +1,38 @@
 Challenge: https://edabit.com/challenge/MnPogX5KgggaRpaJo
+My logic behind this resolution:
+First, we define result as "High Card", if all other possibilities are false, than "High Card" is the result.
+Than, we split the hand imput into to arrays, char Type and int power.
+Using a for going from 0 to hand.Length, we take the last character of each string(The suit) in hand and save
+it into the Type array, then, we take the rest and save it back into the hand array.
+We create the power array using a for that goes from 0 to power.Length, then, using a switch/case, we set the
+value of each "Letter card". 
+J = 11;
+Q = 12;
+K = 13;
+A = 14;
+Then, using a selectionSort function, we order the power array.
+The next step is to count the repeated numbers.
+Once the power array is organized in crescent order, i just neet to check if power[n] = power[n+1].
+If it's true, Counter +1.
+When it is false, i check if counter > 0, if it is i add +1 in the counter and save it in my ofAKind array.
+I use an auxiliary variable to move to the next space in my array ofAKind to save different repeated cards.
+Then if ofAKind[0]> 0 we'll analyze which kind of repeated cards we have.
+
+    > if ofAKind[0] = 4, we have a card repeating 4 times, so it's a "Four of a Kind".
+
+    > if ofAKind[0] = 2, we have a card repeating 2 times, so we have to analyze ofAKind[1].
+        if ofAKinf[1] = 0, we have a "Pair".
+        if ofAKind[1] = 2, we have a "Two Pair".
+        if ofAKind[1] = 3, we have a "Full house".
+
+    > if ofAKind[0] = 3, we have a card repeating 3 times, so we have to analyze ofAKind[1].
+        if ofAKind[1] = 0, we have a "Three of a Kind"
+        if ofAKind[1] = 2, we have a "Full House"
+
+if ofAKind[0]> 0 is false, then we check if type[0] through type[4] are all equal.
+if true, bol flush = true and result = flush in case nothing changes.
+Then we check if power[0] through power[4] is a straight,
+if true, we check if flush also true. If it is we check if the highest card is an ace, if true result = "Royal flush".
+if highest card is'nt an ace, result = "Straight Flush".
+if flush = false, result = "Straight".
+if all of this is false we keep the "High Card" we started with.

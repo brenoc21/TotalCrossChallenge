@@ -1,1 +1,8 @@
 https://edabit.com/challenge/cR976ve6HR7bzBaEa
+My logic behind this resolution:
+This one is very simlar to the previous one.
+We use the same logic to get the highest power of each number.
+But this time we organize in this format:
+if its power is > 1 : PrimeNumber + "^" + ItsPower.
+If its power is = 1 : PrimeNumber.
+We put it all together and we have the result string.

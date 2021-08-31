@@ -1,5 +1,5 @@
 Challenge: https://edabit.com/challenge/jgHNFWFGkiTJpueTK
-My logic behind this challange will be hard to explain.
+My logic behind this resolution:
 Basically, you just need de highest power of each prime number.
 For example, if the imput is 4:
 1, 2, 3, 4|2
@@ -8,6 +8,9 @@ For example, if the imput is 4:
 1, 1, 1, 1|/ (2^2) * 3
 
 My point is: if the 2 wasn't there, i would make no difference at all.
-Same if i had a 9, or a 16, etc.
-So i divide each number in decrescent order for other numbers in crescent order from 2 to n.
-I had to use BigInteger, because other types couldn't handle the number size.
+The same is true if i have a 9. The 3 would make no difference.
+After establishing this we go from 2 to n dividing as much as possible every number. 
+Using a counter, we check if the number we are dividing is the highest power of any prime number, if it is, we save the power value.
+After getting all the highest power values, we multiply them all, and we get the final result.
+I had to use BigInteger because some results were so big that int, float, long or double couldn't handle.
+

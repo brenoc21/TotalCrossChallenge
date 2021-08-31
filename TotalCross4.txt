@@ -1,1 +1,10 @@
 Challenge: https://edabit.com/challenge/jap6GWKheiNvASpCL
+My logic behind this resolution:
+We add all the fractions results to a List of doubles.
+Create a counter to register the number of simplified fractions.
+Then we go through the fraction list comparing each fraction to those that came before.
+If a fraction result is equal to any result of the fractions before, it isn't simplified, 
+so, we stop the comparisons and go to the next fraction.
+If it isn't equal to those that came before, we add +1 to the counter.
+After this comparisons we have our result.
+

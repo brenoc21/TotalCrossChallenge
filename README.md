@@ -1,3 +1,2 @@
-# TotalCrossChallenge
-Challenge: https://edabit.com/challenge/vmRJz4CYmJCQ8otuf
-The logic behind the resolution is, basically, 
+TotalCross Selection Test
+These are five the challenges i chose from Edabit for the TotalCross selection test.

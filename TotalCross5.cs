@@ -6,9 +6,6 @@ public class Program
   
 	public static string PokerHandRanking(string[] hand)
 	{
-    
-		int biggest =0;
-		int aux = 0;
 		int mtxAux = 0;
 		string result = "High Card";
 		bool flush = false;
@@ -43,9 +40,7 @@ public class Program
 			
 		}
 		power = SelectionSort(power, power.Length);
-    for(int i = 0; i < power.Length; i++){
-      
-    }
+    
     
 			for(int i = 0; i < power.Length - 1; i++){
 			

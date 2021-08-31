@@ -1,0 +1,10 @@
+Challenge: https://edabit.com/challenge/vmRJz4CYmJCQ8otuf
+The logic behind this resolution:
+First we need to establish that, for every symbol, there is only 1 other symbol that decreases it.
+For example: "X" and "V" are both only decreased by "I".
+"M" and "D" are both only decreased by "C".
+After establishing that, it is very simple.
+We turn the num string into an char array.
+Go through this array checking if the last symbol is the one that decreases.
+If it is the one that decreases we add to the total the value of the symbol we are in - (2 * the value of the decreasing symbol) to the result.
+Than just return the result and it's done.

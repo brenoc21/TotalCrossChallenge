@@ -1,7 +1,7 @@
 Challenge: https://edabit.com/challenge/MnPogX5KgggaRpaJo
 My logic behind this resolution:
-First, we define result as "High Card", if all other possibilities are false, than "High Card" is the result.
-Than, we split the hand imput into to arrays, char Type and int power.
+First, we define result as "High Card", if all other possibilities are false, then "High Card" is the result.
+Then, we split the hand imput into to arrays, char Type and int power.
 Using a for going from 0 to hand.Length, we take the last character of each string(The suit) in hand and save
 it into the Type array, then, we take the rest and save it back into the hand array.
 We create the power array using a for that goes from 0 to power.Length, then, using a switch/case, we set the
